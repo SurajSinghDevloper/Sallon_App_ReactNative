@@ -17,6 +17,7 @@ import {serviceCardsData, carosolData} from '../tempData/appData';
 import clock from '../../assets/clock.gif';
 import hotSale from '../../assets/hot-sale.gif';
 import sale from '../../assets/sale.gif';
+import TopUserBar from '../components/TopUserBar';
 
 const Home = () => {
   const [search, setSearch] = useState('');
@@ -52,7 +53,8 @@ const Home = () => {
 
   return (
     <ScrollView>
-      <View style={styles.topBarContiner}>
+      <TopUserBar />
+      {/* <View style={styles.topBarContiner}>
         <Image source={userLogo} style={styles.topBarImg} />
         <View style={styles.topBarDetails}>
           <Text style={styles.topBarDetailUserName}>User Kumar Singh</Text>
@@ -63,7 +65,7 @@ const Home = () => {
         <View style={styles.notify}>
           <Octicons name="bell" size={27} color="black" />
         </View>
-      </View>
+      </View> */}
 
       {/* Search bar */}
       <View style={styles.searchBarContainer}>

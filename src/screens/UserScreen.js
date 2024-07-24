@@ -10,6 +10,7 @@ import Bookings from './Bookings';
 import NearBy from './NearBy';
 import AtHome from './AtHome';
 import Profile from './Profile';
+import TestScreens from './TestScreens';
 
 const Tab = createBottomTabNavigator();
 
