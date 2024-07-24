@@ -15,6 +15,9 @@ import {nearbyShops} from '../tempData/appData';
 const NearBy = () => {
   return (
     <ScrollView style={styles.container}>
+      <View style={styles.headingContainer}>
+        <Text style={styles.heading}>Sallons Near by You</Text>
+      </View>
       {nearbyShops.map(shop => (
         <View key={shop.id} style={styles.shopCard}>
           <View style={styles.shopImageContainer}>
@@ -62,6 +65,16 @@ const NearBy = () => {
 };
 
 const styles = StyleSheet.create({
+  headingContainer: {
+    padding: 10,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+  },
+  heading: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'gray',
+  },
   container: {
     flex: 1,
     backgroundColor: '#fff',

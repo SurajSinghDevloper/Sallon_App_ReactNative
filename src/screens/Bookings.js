@@ -11,49 +11,7 @@ import {
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-
-const bookingsData = [
-  {
-    id: '1',
-    date: '2024-07-25',
-    time: '10:00 AM',
-    location: '123 Main St, City',
-    contact: '123-456-7890',
-    stylist: {
-      name: 'Jane Doe',
-      image: 'https://example.com/stylist1.jpg',
-    },
-    services: [
-      {id: '1', name: 'Hair Cut', duration: '30 mins'},
-      {id: '2', name: 'Beard Trim', duration: '15 mins'},
-      {id: '3', name: 'Shampoo', duration: '10 mins'},
-      {id: '4', name: 'Conditioning', duration: '20 mins'},
-    ],
-    notes: 'Please be on time',
-    price: '$50',
-    paymentMethod: 'Paid',
-  },
-  {
-    id: '2',
-    date: '2024-07-26',
-    time: '2:00 PM',
-    location: '456 Another St, City',
-    contact: '987-654-3210',
-    stylist: {
-      name: 'John Smith',
-      image: 'https://example.com/stylist2.jpg',
-    },
-    services: [
-      {id: '5', name: 'Hair Color', duration: '1 hour'},
-      {id: '6', name: 'Hair Treatment', duration: '45 mins'},
-      {id: '7', name: 'Scalp Massage', duration: '15 mins'},
-      {id: '8', name: 'Hair Mask', duration: '30 mins'},
-    ],
-    notes: 'Allergic to certain dyes',
-    price: '$120',
-    paymentMethod: 'COD',
-  },
-];
+import {bookingsData} from '../tempData/appData';
 
 const Bookings = () => {
   return (
@@ -128,7 +86,7 @@ const styles = StyleSheet.create({
     fontSize: 24,
     fontWeight: 'bold',
     textAlign: 'center',
-    marginVertical: 20,
+    padding: 5,
   },
   bookingCard: {
     backgroundColor: '#f8f8f8',

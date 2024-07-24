@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import {
   View,
   Text,
@@ -6,19 +6,19 @@ import {
   ScrollView,
   Image,
   TouchableOpacity,
-} from "react-native";
-import { servicesData } from "../tempData/appData";
+} from 'react-native';
+import {servicesData} from '../tempData/appData';
 
 const AtHome = () => {
   return (
     <ScrollView style={styles.container}>
+      <View style={styles.headingContainer}>
+        <Text style={styles.heading}>Service At Your Home</Text>
+      </View>
       <View style={styles.grid}>
-        {servicesData.map((service) => (
+        {servicesData.map(service => (
           <View key={service.id} style={styles.card}>
-            <Image
-              source={{ uri: service.image }}
-              style={styles.serviceImage}
-            />
+            <Image source={{uri: service.image}} style={styles.serviceImage} />
             <View style={styles.cardContent}>
               <Text style={styles.serviceName}>{service.name}</Text>
               <Text style={styles.description}>{service.description}</Text>
@@ -39,64 +39,74 @@ const AtHome = () => {
 };
 
 const styles = StyleSheet.create({
+  headingContainer: {
+    padding: 10,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+  },
+  heading: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'gray',
+  },
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     padding: 10,
   },
   grid: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
   },
   card: {
-    backgroundColor: "#f8f8f8",
+    backgroundColor: '#f8f8f8',
     borderRadius: 10,
-    width: "48%",
+    width: '48%',
     marginVertical: 10,
-    overflow: "hidden",
-    shadowColor: "#000",
-    shadowOffset: { width: 0, height: 1 },
+    overflow: 'hidden',
+    shadowColor: '#000',
+    shadowOffset: {width: 0, height: 1},
     shadowOpacity: 0.3,
     shadowRadius: 2,
     elevation: 2,
   },
   serviceImage: {
-    width: "100%",
+    width: '100%',
     height: 150,
-    resizeMode: "cover",
+    resizeMode: 'cover',
   },
   cardContent: {
     padding: 15,
   },
   serviceName: {
     fontSize: 18,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginBottom: 5,
   },
   description: {
     fontSize: 14,
-    color: "#555",
+    color: '#555',
     marginBottom: 10,
   },
   buttonContainer: {
-    flexDirection: "row",
-    justifyContent: "space-between",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
   },
   button: {
-    backgroundColor: "#007BFF",
+    backgroundColor: '#007BFF',
     paddingVertical: 10,
     paddingHorizontal: 15,
     borderRadius: 5,
-    alignItems: "center",
+    alignItems: 'center',
     flex: 1,
     marginHorizontal: 5,
   },
   bookButton: {
-    backgroundColor: "#28A745",
+    backgroundColor: '#28A745',
   },
   buttonText: {
-    color: "#fff",
+    color: '#fff',
     flex: 1,
   },
 });

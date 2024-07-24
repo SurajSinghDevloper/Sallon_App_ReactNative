@@ -148,7 +148,7 @@ const styles = StyleSheet.create({
   searchBarContainer: {
     marginLeft: 5,
     marginRight: 5,
-    padding: 5,
+    height: 60,
   },
   carouselContainer: {
     marginTop: 10,
